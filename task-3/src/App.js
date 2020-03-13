@@ -2,7 +2,7 @@ import React from "react";
 import ContactForm from "./component/contactForm/ContactForm";
 import ContactList from "./component/contactList/ContactList";
 import Filter from "./component/filter/Filter";
-import css from '../src/App.module.css'
+import css from "../src/App.module.css";
 
 class App extends React.Component {
   state = {
@@ -13,6 +13,19 @@ class App extends React.Component {
     filter: ""
   };
 
+componentDidMount() {
+  this.setState({
+    contacts:JSON.parse(localStorage.getItem("contacts"))
+  })
+}
+
+  componentDidUpdate() {
+    localStorage.setItem(
+      "contacts",
+      JSON.stringify(this.state.contacts)
+    );
+  }
+
   handelSubmitForm = (e, data) => {
     e.preventDefault();
     const checkName = this.state.contacts.some(
@@ -21,7 +34,7 @@ class App extends React.Component {
     !checkName
       ? this.setState(prevState => ({
           contacts: [...prevState.contacts, data]
-      }))
+        }))
       : alert("You can not add this contact!");
   };
 
