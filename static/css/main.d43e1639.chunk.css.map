@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.module.css"],"names":[],"mappings":"AAAA,sBACI,WAAY,CACZ,qBAAuB,CACvB,aAAc,CACd,gEAAsE,CACtE,eACJ","file":"main.d43e1639.chunk.css","sourcesContent":[".container{\n    width: 400px;\n    border: 1px solid black;\n    margin: 0 auto;\n    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;\n    font-weight: 600;\n}\n\n"]}
